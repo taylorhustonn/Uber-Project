@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="/Users/abigailbowen/Desktop/Class Folders/ETI 461/Uber Project/public/indexcss.css">
+    <link href="https://fonts.cdnfonts.com/css/uber-move-text" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/uber-move-text');
+
+        :root {
+    font-family: 'Uber Move Text', sans-serif;
+    font-size: 16px;
+    --color-grey: rgb(238, 238, 238);
+    --color-greyDarker: rgb(84, 84, 84);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: auto;
+    background-color: black;
+}
+
+header{
+    font-family: 'Uber Move Text', sans-serif;
+    color: white;
+    height: 100px;
+    .container{
+        display: flex;
+        align-items: center;
+    }
+    .logo{
+        padding-left: 100px;
+        padding-right: 25px;
+    }
+    .ride{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .drive{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .business{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .UberEats{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .about{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .language{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .help{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .LogIn{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .SignUp{
+        padding-left: 10px;
+        padding-right: 100px;
+    }
+    .LogInButton{
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        border-width: 0px;
+        font-family: 'Uber Move Text', sans-serif;
+        font-size: 12pt;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .SignUpButton{
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        border-width: 0px;
+        font-family: 'Uber Move Text', sans-serif;
+        font-size: 12pt;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .extraNav{
+        margin-left: auto;
+    }
+    .navButtons {
+        -ms-grid-row-align: center;
+        align-self:center;
+        padding-left:0;
+        padding-right:4px;
+        margin-bottom:0;
+    }
+    .language,
+    .Help{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .extraNav,
+  .navButtons,
+  .navOptions {
+    display: flex;
+  }
+}
+
+.mainDiv{
+    padding-top: 5%;
+    width: 80%;
+    margin: auto;
+    margin-top: auto;
+    display: flex;
+    align-items: stretch;
+    .subDiv{
+        flex: 1; 
+        padding: 1em;
+    }
+    .mainButtons {
+        display: flex; 
+        border-radius: 10px;
+    }
+    .mainPic{
+        margin-top: auto;
+        padding-left: 5px;
+        height: 800px;
+        width: 600px;
+    }
+    .date-time{
+        display: flex;
+    }
+    .inputPickup,
+    .inputDropoff{
+        height: 50px;
+        width: 410px;
+        font-size: 14pt;
+        font-family: 'Uber Move Text', sans-serif;
+        margin: 5px 5px 10px 0px;
+        border-radius: 10px;
+        background-color: rgb(238, 238, 238);
+        border-width: 0px;
+    }
+    .input-date,
+    .input-time{
+        height: 50px;
+        width: 200px;
+        font-size: 14pt;
+        font-family: 'Uber Move Text', sans-serif;
+        margin: 10px 10px 30px 0px;
+        border-radius: 10px;
+        background-color: rgb(238, 238, 238);
+        border-width: 0px;
+    }
+    .mainText{
+        font-family: 'Uber Move Text', sans-serif;
+        font-size: 40pt;
+        margin: 10px 50px 30px 0px;
+        padding-bottom: 90px;
+    }
+    .seePrices{
+        height: 50px;
+        width: 110px;
+        border-radius: 10px;
+        background-color: black;
+        font-family: 'Uber Move Text', sans-serif;
+        font-size: 14pt;
+        color: white;
+        border-width: 0px;
+    }
+    .rent-text,
+    .ride-text{
+        font-family: 'Uber Move Text', sans-serif;
+        font-size: 10pt;
+    }
+    input[type='radio']{
+        -webkit-appearance: none;
+    }
+    .css-cFolCb {
+        transform: translate(40%, 15%);
+        position: absolute;
+    }
+    .css-hbUGOS {
+        transform: translate(40%, 15%);
+        position: absolute;
+    }
+    label>span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+    }
+    label {
+        position: relative;
+        background-color: rgb(238, 238, 238);
+        margin: 10px 100px 30px 0px;
+        border-radius: 10px;
+        background-color: rgb(238, 238, 238);
+        border-width: 0px;
+        height: 50px;
+        width: 50px;
+    }
+    input[type="radio"]:checked + label {
+	background-color: black;
+	color: #ffffff;
+    box-shadow: black;
+    }
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        color: white;
+        font-size: 14pt;
+        font-family: 'Uber Move Text', sans-serif;
+    }
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: white;
+    }
+    .result{
+        font-size: 14pt;
+        font-family: 'Uber Move Text', sans-serif;
+        margin: 10px 10px 30px 0px;
+        border-radius: 10px;
+        background-color: rgb(238, 238, 238);
+        border-width: 0px;
+    }
+    .uberDriver{
+        color: black;
+        font-size: 14pt;
+        font-family: 'Uber Move Text', sans-serif;
+    }
+    .sidebarCheckout{
+        height: 50px;
+        border-radius: 10px;
+        background-color: white;
+        font-family: 'Uber Move Text', sans-serif;
+        font-size: 14pt;
+        color: black;
+        border-width: 0px;
+    }
+}
+    </style> 
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Uber</h1>
+            </div>
+            <div class="navOptions">
+                <div class="ride">
+                    <span>Ride</span>
+                </div>
+                <div class="drive">
+                    <span>Drive</span>
+                </div>
+                <div class="business">
+                    <span>Business</span>
+                </div>
+                <div class="UberEats">
+                    <span>Uber Eats</span>
+                </div>
+                <div class="about">
+                    <span>About</span>
+                </div>
+            </div>
+            <div class="extraNav">
+                <div class="language">
+                    <span>English</span>
+                </div>                    
+                <div class="Help">
+                    <span>Help</span>
+                </div>
+                <div class="navButtons">
+                    <div class="LogIn">
+                        <span><button class="LogInButton">Log in</button></span>
+                    </div>
+                    <div class="SignUp">
+                        <span><button class="SignUpButton">Sign up</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mainDiv">
+        <div class="subDiv">
+            <h1 class="mainText">Book a ride with Uber</h1>
+            <form action="/submit" method="POST">
+                <div class="mainButtons">
+                    <input name="ride" id="ride" type="radio" data-baseweb="button" aria-label="Ride" class="ride-rent">
+                    <label for="ride">
+                        <div class="css-cFolCb">
+                            <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+                            <path d="m20.9 9-1.5-4.6c-.3-.8-1-1.4-1.9-1.4H6.4c-.9 0-1.6.5-1.9 1.4L3 9H1v3h1v9h4v-2h12v2h4v-9h1V9h-2.1ZM5 14h4v2H5v-2Zm10 2v-2h4v2h-4ZM7.1 6h9.7l1.3 4H5.8l1.3-4Z" fill="currentColor"></path>
+                            </svg>
+                            <div class="ride-text">Ride</div>
+                        </div>
+                    </label>
+                    <input type="radio" name="rent" id="rent" data-baseweb="button" aria-label="Rent" class="ride-rent">
+                    <label for="rent">
+                        <div class="css-hbUGOS">
+                        <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+                            <g fill="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="m18.41 2.41 3.17 3.17a4.834 4.834 0 0 1 0 6.84L16.5 17.5l-10-10 5.08-5.09C12.53 1.47 13.76 1 15 1c1.24 0 2.47.47 3.41 1.41ZM13.25 8 16 10.75l2.25-2.25-2.75-2.75L13.25 8Z"></path>
+                            <path d="M2 21 .5 19.5l7.25-7.25 3.5 3.5L6 21H2Z"></path>
+                            </g>
+                        </svg>
+                        <div class="rent-text">Rent</div>
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    <div class="pickup">
+                        <input type="string" class="inputPickup" name="pickup" placeholder="Pickup Location">
+                    </div>
+                    <div class="dropoff">
+                        <input type="string" class="inputDropoff" name="dropoff" placeholder="Dropoff Location">
+                    </div>
+                    <div class="date-time">
+                        <select name="date" id="date" class="input-date">
+                            <option value="Today" selected>Today</option>
+                            <option value="Tomorrow">Tomorrow</option>
+                        </select>
+                        <select name="time" id="time" class="input-time">
+                            <option type="string" value="Now" selected>Now</option>
+                            <option type="string" value="5">5 minutes</option>
+                            <option type="string" value="10">10 minutes</option>
+                            <option type="string" value="15">15 minutes</option>
+                            <option type="string" value="20">20 minutes</option>
+                        </select>
+                    </div>
+            </form>
+                <div class="submit-button">
+                    <button type="submit" class="seePrices">See Prices</button>
+                </div>
+            </div>
+            <div class="rideResults">
+                <% for(var ride of rides){ %>
+                    <div class="results">
+                        <form id="checkout" name="checkout" method="POST">
+                            <div id="result" name="result" class="result">
+                                <p><span style="font-weight: bold;">Driver: </span><%= ride.Driver %></p>
+                                <p><span style="font-weight: bold;">Car: </span><%= ride.CarModel %></p>
+                                <p><span style="font-weight: bold;">License Plate: </span><%= ride.LicensePlate%></p>
+                                <p><span style="font-weight: bold;">Miles Away: </span><%= ride.MilesAway %><span style="font-weight: bold;"> Minutes Away: </span><%= ride.MinutesAway%></p>
+                                <p><span style="font-weight: bold;">Price: </span><%= ride.Price %></p>
+                            </div>
+                        </form>
+                        <button id="checkoutButton" type="submit" onclick="openCheckout()" class="seePrices">Choose UberX</button>
+                    </div>
+                <%}%>  
+            </div>
+        </div>
+        <div class="subDiv">
+            <div>
+                <img class="mainPic" src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_540,h_674/v1708640362/assets/54/5dd314-0527-4ead-9465-329da9fc7575/original/Uber_COMMUTER_Delivery.jpg">
+            </div>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <div id="uberDriver" class="uberDriver">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeCheckout()">&times;</a>
+            </div>
+            <button id="sidebarCheckout" class="sidebarCheckout">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function openCheckout() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeCheckout() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+    function Checkout(div_name, data){
+        document.getElementById(div_name).innerText += data;
+    }
+    document.getElementById("checkoutButton").addEventListener('click', function() { 
+        var uberDriver = document.getElementById("result");
+        let div = document.getElementById("uberDriver");
+        //Checkout("uberDriver", uberDriver); 
+        div.appendChild(uberDriver);
+        //div += uberDriver;
+        //("#result").clone().appendTo("#uberDriver");
+        //var html = $("#result").html();
+        //document.getElementById("uberDriver").innerHTML = html;
+    }); 
+</script>   
+
+
